@@ -101,5 +101,4 @@ public class LoanOfferServiceImpl {
         return  ((float) creditModifier / loanAmount) * loanPeriodInMonths;
     }
 
-
 }
