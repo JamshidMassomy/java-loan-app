@@ -5,12 +5,12 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class LoanOfferResponse {
+public class LoanOfferResponseDto {
 
     private Integer offeredLoanAmount;
     private Integer loanPeriodInMonths;
 
-    public LoanOfferResponse(Integer loanAmount, Integer loanPeriod) {
+    public LoanOfferResponseDto(Integer loanAmount, Integer loanPeriod) {
         this.loanPeriodInMonths = loanPeriod;
         this.offeredLoanAmount = loanAmount;
     }

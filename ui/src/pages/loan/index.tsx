@@ -38,8 +38,7 @@ const LoanPage = () => {
         })
         .catch(() => {
           setLoanOffer({ loanPeriodInMonths: 0, offeredLoanAmount: 0 });
-          console.log('somethign went worong');
-          // toastDispatcher('Failed to fetch API! Something went wrong');
+          console.log('something went worong');
         });
     }
   };

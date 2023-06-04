@@ -8,7 +8,7 @@ import javax.validation.constraints.NotBlank;
 
 @AllArgsConstructor
 @Data
-public class LoanRequest {
+public class LoanRequestDto {
 
     @NotBlank(message = "Personal Code can not be blank")
     private String personalCode;

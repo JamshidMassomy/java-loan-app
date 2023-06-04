@@ -1,7 +1,7 @@
 package com.loan_app.controller;
 
-import com.loan_app.dto.LoanOfferResponse;
-import com.loan_app.dto.LoanRequest;
+import com.loan_app.dto.LoanOfferResponseDto;
+import com.loan_app.dto.LoanRequestDto;
 import com.loan_app.service.LoanOfferServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,10 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class LoanController {
 
-    private final LoanOfferServiceImpl loanApprovalService;
+    private final LoanOfferServiceImpl loanOfferServiceImpl;
 
     @GetMapping("loan")
-    public ResponseEntity<LoanOfferResponse> getLoanOffer(@Validated LoanRequest loanRequest) {
-        return new ResponseEntity<>(loanApprovalService.fetchLoanOffer(loanRequest), HttpStatus.OK);
+    public ResponseEntity<LoanOfferResponseDto> fetchLoanOffer(@Validated LoanRequestDto loanRequestDto) {
+        return new ResponseEntity<>(loanOfferServiceImpl.fetchLoanOffer(loanRequestDto), HttpStatus.OK);
     }
+
 }
