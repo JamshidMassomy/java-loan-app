@@ -1,18 +1,14 @@
 package com.loan_app.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
+@AllArgsConstructor
 public class LoanOfferResponseDto {
 
     private Integer offeredLoanAmount;
     private Integer loanPeriodInMonths;
-
-    public LoanOfferResponseDto(Integer loanAmount, Integer loanPeriod) {
-        this.loanPeriodInMonths = loanPeriod;
-        this.offeredLoanAmount = loanAmount;
-    }
 
 }

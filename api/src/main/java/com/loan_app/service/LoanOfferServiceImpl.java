@@ -7,7 +7,6 @@ import com.loan_app.dto.LoanRequestDto;
 import com.loan_app.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.*;
 
 @Service
@@ -64,5 +63,4 @@ public class LoanOfferServiceImpl implements ILoanService {
     private boolean hasDebt(LoanRequestDto loanRequestDto) {
         return Objects.equals(getUserCreditModifier(loanRequestDto.getPersonalCode()), -1);
     }
-
 }
